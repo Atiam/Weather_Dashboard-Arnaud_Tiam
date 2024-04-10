@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <!-- Search for city and differents options.-->
+        <section >
+            <div>
+                <h2>Search for a City</h2>
+                <form id="search-form" >
+                  <input id="city-name-input" class="form-input w-100" type="text" placeholder="Search!">
+                  <button class="btn btn-info btn-block" type="submit">Search</button>
+                </form>
+            </div>
+            <hr>
+            <!-- Display the search history. -->
+            <!-- When I click on a city on the search history, THEN I am again presented with current and future conditions for that city. -->
+            
+            <div id="displayHistory"></div>
+        </section>        
+        <section class="card" >
+            <!-- Display current and future conditions for the city that what searched -->
+            <!-- Display the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed -->
+            <div id="current"></div>
+            <!-- To display 5-Day Forecast -->
+            <!-- Displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity. -->
+            <div id="forecast"></div>
+        </section>
+       
+        <div></div>
+    </main>
+    <footer></footer>
+    
+    <script src="Assets/js/script.js"></script>
+</body>
+</html>
