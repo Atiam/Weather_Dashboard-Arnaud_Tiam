@@ -11,32 +11,36 @@ function handleUserInput(event) {
     return;
   }
 
-  handleSearchForCity(cityNameInputval)
-  handleSearchForecastData(cityNameInputval)
-
 
 //Store user input inot the local storage
-  if (cityNameInputval.length){
-    localStorage.setItem("historicalData", json.stringify(cityNameInputval));
-
-
-   }
+if (cityNameInputval.length){
   
+  let previoussearch = JSON.parse(localStorage.getItem("historicalData")) || [];
+   
+  if (!previoussearch.includes(cityNameInputval)){
+    previoussearch.push(cityNameInputval);
+    localStorage.setItem("historicalData", JSON.stringify(previoussearch))
 
   
+  }
+ 
+  
+   
   //Create card to display historical search
   displayHistoryEl = document.querySelector("#displayHistory");
-  cityArray = json.parse(localStorage.getItem("historicalData"))
-
 
 
   //1- create elements
-const ulEl = document.createElement("ul");
-const liEl = document.createElement("li");
+  const ulEl = document.createElement("ul");
+  const liEl = document.createElement("li");
+
+for (city of previoussearch){
+
 
 //2-Create contents
-for (city of cityArray){
   liEl.textContent = city;
+
+
 }
 
 
@@ -46,6 +50,19 @@ for (city of cityArray){
 ulEl.append(liEl);
 displayHistoryEl.append(ulEl);
 
+  
+     }
+  
+  
+  
+     
+
+  handleSearchForCity(cityNameInputval)
+  handleSearchForecastData(cityNameInputval)
+
+
+
+ 
 }
 
 
@@ -118,7 +135,7 @@ fetch(queryURL)
 console.log(dataApi);
 
 for (let i = 1; i < 41; i+=8) {
-console.log(dataApi.list[i]); //test
+console.log(dataApi.list[i]); 
 let date = new Date(dataApi.list[i].dt * 1000);
 console.log(date.toLocaleDateString());
       
