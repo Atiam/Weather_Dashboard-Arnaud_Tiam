@@ -14,5 +14,6 @@ To access the website, click on this link: https://atiam.github.io/Weather_Dashb
 ![alt text](https://github.com/Atiam/Weather_Dashboard-Arnaud_Tiam/blob/main/Assets/images/web-app-image.png)
 
 
+
 ## License
 This project is MIT licensed.
