@@ -85,7 +85,7 @@ function handleSearchForCity(cityNameInputval) {
 
       // resultBody.classList.add("card-body");
       cityNameEl.textContent = dataApi.name + " " + date.toLocaleDateString();
-      tempEl.textContent = "Temperature: " + dataApi.main.temp + " °F";
+      tempEl.textContent = "Temp: " + dataApi.main.temp + " °F";
       humityEl.textContent = "Humidity: " + dataApi.main.humidity + " %";
       windEl.textContent = "Wind: " + dataApi.wind.speed + " MPH";
       //   resultDetails.textContent = dataApi.weather[0].main;
@@ -140,7 +140,7 @@ function handleSearchForecastData(cityNameInputval) {
         // forecastBody.className = `card-body border-primary d-inline`;
         forecastDateEl.textContent = date.toLocaleDateString();
         forecastTempEl.textContent =
-          "Temperature: " + dataApi.list[i].main.temp + " °F";
+          "Temp: " + dataApi.list[i].main.temp + " °F";
         fHumityEl.textContent =
           "Humidity: " + dataApi.list[i].main.humidity + " %";
         fWindEl.textContent = "Wind: " + dataApi.list[i].wind.speed + " MPH";
