@@ -173,5 +173,5 @@ handhistorycalData();
 //Add a listener on the search button.
 searchFormEl.addEventListener("submit", handleUserInput);
 
-// //Add event listener on the button.
+
 // document.querySelector(`.buttonbtn`).addEventListener("click", handleSearchForecastData)
