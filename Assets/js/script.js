@@ -58,7 +58,7 @@ function handhistorycalData() {
 
 //Get the city name and past it to the queryURL.
 function handleSearchForCity(cityNameInputval) {
-  const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityNameInputval}&appid=${APIKey}&units=imperial`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityNameInputval}&appid=${APIKey}&units=imperial`;
 
   //For test purpose
   fetch(queryURL)
@@ -99,7 +99,7 @@ function handleSearchForCity(cityNameInputval) {
 
 function handleSearchForecastData(cityNameInputval) {
   // const cityNameInputval = document.querySelector(`#city-name-input`).value;
-  const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cityNameInputval}&appid=${APIKey}&units=imperial`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameInputval}&appid=${APIKey}&units=imperial`;
 
   //Get the weather for 5 next days
   fetch(queryURL)
